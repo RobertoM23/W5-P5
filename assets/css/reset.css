@@ -1,5 +1,5 @@
-/* CSS Reset */
-html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+/* Reset di base per uniformare il comportamento tra i browser */
+* {
     margin: 0;
     padding: 0;
     border: 0;
@@ -8,28 +8,41 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
     vertical-align: baseline;
 }
 
+/* Imposta box-sizing per tutti gli elementi */
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+/* Elementi HTML5 come block */
 article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
     display: block;
 }
 
-body {
-    line-height: 1;
+/* Rimuove lo stile predefinito per liste */
+ul, ol {
+    list-style: none;
 }
 
-blockquote, q {
-    quotes: none;
+/* Link senza decorazione */
+a {
+    text-decoration: none;
+    color: inherit;
 }
 
-blockquote:before, blockquote:after, q:before, q:after {
-    content: '';
-    content: none;
+/* Immagini responsive */
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
 }
 
+/* Tabelle senza spazio tra celle */
 table {
     border-collapse: collapse;
     border-spacing: 0;
 }
 
-body {
-    -webkit-text-size-adjust: none;
+/* Elementi di form resettati */
+button, input, select, textarea {
+    font: inherit;
 }

@@ -1,0 +1,284 @@
+/* Importazione dei font da Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Spectral:wght@400;700&family=Roboto:wght@400;700&display=swap');
+
+/* Reset di base */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #fff;
+    color: #191919;
+    line-height: 1.6;
+}
+
+/* Stile della navbar */
+.navbar {
+    background-color: #FFC017; /* Giallo Medium */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-bottom: 1px solid black;
+    z-index: 1000;
+}
+
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 90%;
+    max-width: 1200px;
+}
+
+.logo img {
+    height: 30px;
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    list-style: none;
+}
+
+.nav-links li a {
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.btn-get-started {
+    background-color: black;
+    color: white;
+    padding: 8px 16px;
+    border-radius: 20px;
+    font-weight: bold;
+}
+
+.navbar.scrolled {
+    background-color: #ffffff; /* Bianco quando scorre */
+}
+
+/* Stile del pulsante principale */
+.button {
+    background-color: #191919;
+    color: white;
+    padding: 12px 25px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    border-radius: 20px;
+    transition: background-color 0.3s;
+}
+
+.button:hover {
+    background-color: #1a8917; /* Verde al passaggio del mouse */
+}
+
+/* Stile della sezione hero */
+.hero {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: left;
+    height: 75vh; /* Riduce l'altezza per essere più simile al design */
+    width: 100%;
+    background-color: #ffc017;
+    padding: 60px 80px; /* Più padding per migliorare la disposizione */
+    position: relative;
+    border-bottom: 1px solid #000;
+}
+
+.hero-content {
+    width: 50%;
+    max-width: 600px;
+    position: relative;
+    z-index: 1;
+}
+
+.hero-content h1 {
+    font-family: "Spectral", serif;
+    font-size: 80px; /* Testo grande come nel mockup */
+    font-weight: bold;
+    line-height: 1.1;
+}
+
+.hero-content p {
+    font-size: 20px;
+    margin-top: 10px;
+}
+
+.hero-content .button {
+    margin-top: 20px;
+    padding: 12px 24px;
+    font-size: 18px;
+}
+
+.hero-svg {
+    position: absolute;
+    right: 5%;
+    top: 10%;
+    width: 35%;
+    height: auto;
+}
+
+.hero-svg svg {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Effetto fade-in */
+.fade-in {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease-in-out, transform 0.6s ease-in-out;
+}
+
+.fade-in.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.trending {
+    background-color: white;
+    padding: 40px 80px;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.trending h2 {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.trending .articles {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.trending .articles article {
+    width: 30%;
+    padding: 10px;
+}
+
+.articles-container {
+    display: flex;
+    flex-direction: column;
+    padding: 40px 80px;
+}
+
+.content-container {
+    display: flex;
+    flex-direction: row;  /* Disposizione in riga */
+    justify-content: space-between; /* Separa articoli e sidebar */
+    align-items: flex-start; /* Allinea gli elementi in alto */
+    width: 90%;
+    max-width: 1200px;  /* Impedisce che la larghezza diventi troppo grande */
+    margin: 40px auto;
+}
+
+.main-articles {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    width: 60%;  /* Riduce la larghezza per lasciare spazio alla sidebar */
+    margin-left: 15px; /* Mantiene un piccolo margine a sinistra */
+    min-width: 600px; /* Evita che gli articoli si allarghino troppo */
+}
+
+.article {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #e0e0e0;
+    padding-bottom: 20px;
+}
+
+.article-info {
+    width: 60%;
+}
+
+.article img {
+    width: 160px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+.article h3 {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.discover-more {
+    background-color: white;
+    padding: 40px 80px;
+}
+
+.tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.tags span {
+    background-color: #f4f4f4;
+    padding: 10px 15px;
+    border-radius: 20px;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.tags span:hover {
+    background-color: #e0e0e0;
+}
+
+.sidebar {
+    width: 30%; /* Sidebar compatta per affiancarsi agli articoli */
+    min-width: 280px;
+    padding-left: 20px; /* Distanza tra articoli e sidebar */
+    display: flex;
+    flex-direction: column;
+}
+
+.footer {
+    padding-top: 10px;
+    border-top: 1px solid #e0e0e0;
+    width: 100%;
+    font-size: 14px;
+}
+
+.footer-links {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+}
+
+.footer-links li a {
+    text-decoration: none;
+    color: #757575;
+    font-size: 14px;
+}
+
+.footer-links li a:hover {
+    color: #191919;
+}
+
+/* Responsive: Nasconde l'SVG su schermi piccoli */
+@media (max-width: 768px) {
+    .hero-svg {
+        display: none;
+    }
+}
